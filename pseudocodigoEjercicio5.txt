@@ -1,0 +1,62 @@
+Algoritmo Ejercicio5
+	
+	edadesMujeres = 0
+	edadesHombres = 0
+	edadesSeñoritas = 0
+	edadesJovenes = 0
+	
+	Hacer
+		
+		Escribir "Ingrese su edad"
+		leer edad 
+		
+		Escribir "Ingrese su sexo ( 1 = Hombre / 0 = Mujer )"
+		leer sexo
+		
+		si edad >= 18 Entonces
+			
+			si sexo = 0 Entonces
+				
+				edadesMujeres = edadesMujeres + 1
+				
+			SiNo
+				
+				edadesHombres = edadesHombres + 1
+				
+			FinSi
+			
+		FinSi
+		
+		si edad < 18 Entonces
+			
+			si sexo = 0 Entonces
+				
+				edadesSeñoritas = edadesSeñoritas + 1
+				
+			SiNo
+				
+				edadesJovenes = edadesJovenes + 1
+				
+			FinSi
+		FinSi
+		
+		Escribir "Desea Ingresar otra edad y sexo? ( 1 = si / 0 = no )"
+		leer respuesta
+		
+		si respuesta = 1 Entonces
+			Escribir "De nuevo!"
+		SiNo si respuesta = 0 Entonces
+				Escribir "Procesando..."
+			SiNo
+				Escribir "Debe colocar 1 para SI y 0 para NO"
+			FinSi
+		FinSi
+		
+
+		
+	Hasta Que respuesta = 0 
+	
+	Escribir "Hay un total de: " edadesMujeres " Mujeres mayores de edad" 
+	Escribir "Hay un total de: " edadesJovenes " Hombres menores de edad"
+	
+FinAlgoritmo
